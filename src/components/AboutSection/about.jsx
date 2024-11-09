@@ -22,9 +22,8 @@ const About = () => {
             </p>
             <br />
             <p tabIndex={0}>
-              Instead of creating an online Concepts Art website, i started
-              enjoying web development. Creating custom things for web taught me
-              a lot about design &amp; development!
+              i started enjoying web development. Creating custom things for web
+              taught me a lot about design &amp; development!
             </p>
             <br />
             <p tabIndex={0}>
