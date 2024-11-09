@@ -6,10 +6,12 @@ import SkillSection from "./components/SkillSection/Skill";
 const App = () => {
   return (
     <>
-      <Header />
-      <LandingPage />
-      <About />
-      <SkillSection />
+      <main>
+        <Header />
+        <LandingPage />
+        <About />
+        <SkillSection />
+      </main>
     </>
   );
 };
