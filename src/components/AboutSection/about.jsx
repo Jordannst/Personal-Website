@@ -15,10 +15,10 @@ const About = () => {
         <div className="info-dp-section">
           <div className="about-info">
             <p tabIndex={0}>
-              Hi! My name is Jordan Sutarto. I&apos;m a second year student at
-              Klabat University. I am interested in web design, and Programming.
-              My interest in this field started in 2023 when I tried to learn
-              about web development.
+              Hi! My name is Jordan Sutarto. I&apos;m a second-year Informatics
+              student at Klabat University. I am interested in web design and
+              Programming. My interest in this field started in 2023 when I
+              tried to learn about web development.
             </p>
             <br />
             <p tabIndex={0}>
