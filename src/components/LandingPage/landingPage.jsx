@@ -24,7 +24,7 @@ const LandingPage = () => {
         </p>
 
         <div className="contact-btn-div">
-          <a href="mailto:jordansutart08@gmail.com" tabIndex={-1}>
+          <a href="mailto:jordansutart08@gmail.com">
             <button className="letsTalkBtn">
               <p className="letsTalkBtn-text">Let&apos;s Talk!</p>
               <span className="letsTalkBtn-BG" />

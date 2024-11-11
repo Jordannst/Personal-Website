@@ -2,7 +2,7 @@ const Header = () => {
   return (
     <header>
       <div className="navbar" id="navbar">
-        <div className="logo" tabIndex={0} aria-label="name">
+        <div className="logo" aria-label="name">
           <div className="name-top">
             <p>Jordannst</p>
           </div>
@@ -10,7 +10,7 @@ const Header = () => {
         <div className="navbar-tabs" id="navbar-tabs">
           <ul className="navbar-tabs-ul">
             <li className="home activeThistab navbar-tabs-li">
-              <a href="#home" tabIndex={0} aria-label="Home menu button">
+              <a href="#home" aria-label="Home menu button">
                 &lt;/Home&gt;
               </a>
             </li>

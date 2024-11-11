@@ -3,30 +3,26 @@ const About = () => {
     <section className="about-section-container" id="about">
       <div className="about-section">
         <div className="section-heading">
-          <h2
-            className="section-heading-article"
-            tabIndex={0}
-            aria-label="About me heading"
-          >
+          <h2 className="section-heading-article" aria-label="About me heading">
             &lt;/AboutMe&gt;
           </h2>
           <p className="sectionHeadingP" />
         </div>
         <div className="info-dp-section">
           <div className="about-info">
-            <p tabIndex={0}>
+            <p>
               Hi! My name is Jordan Sutarto. I&apos;m a second-year Informatics
               student at Klabat University. I am interested in web design and
               Programming. My interest in this field started in 2023 when I
               tried to learn about web development.
             </p>
             <br />
-            <p tabIndex={0}>
+            <p>
               i started enjoying web development. Creating custom things for web
               taught me a lot about design &amp; development!
             </p>
             <br />
-            <p tabIndex={0}>
+            <p>
               My main focus these days is on web design and learning more about
               web development.
             </p>
@@ -41,12 +37,7 @@ const About = () => {
             </button>
           </div>
           <div className="dp">
-            <img
-              src="#"
-              alt="Jordan Sutarto"
-              tabIndex={0}
-              aria-label="jordanphoto"
-            />
+            <img src="#" alt="Jordan Sutarto" aria-label="jordanphoto" />
           </div>
         </div>
       </div>
