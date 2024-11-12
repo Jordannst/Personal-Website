@@ -1,32 +1,46 @@
+import { getDatabase, ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
+
 const LandingPage = () => {
+  const [landingPage, setPage] = useState({});
+
+  useEffect(() => {
+    const db = getDatabase();
+    const LandingPageRef = ref(db, "LandingPage/");
+    onValue(LandingPageRef, (snapshot) => {
+      const data = snapshot.val();
+      setPage(data);
+    });
+  }, []);
+
   return (
     <section className="landing-page-container" id="home">
       <div className="blob" />
       <div className="text-content">
         <article id="hello-friend">
-          <p>Hello I&apos;m,</p>
+          <p>{landingPage.hello}</p>
         </article>
 
         <article id="name">
-          <p>Jordan Sutarto</p>
+          <p>{landingPage.name}</p>
         </article>
 
         <article id="work">
-          <p>I Design &amp; Code For Web</p>
+          <p>{landingPage.work}</p>
         </article>
 
         <p id="info-para">
-          Second year student interested in Digital Concept Art, Frontend Web
-          Design. I love fun Web UIs, collaboration, and creating products.
+          {landingPage.info1}
+
           <br />
-          <br />I value simple content structure, clean design patterns, and
-          thoughtful interactions.
+          <br />
+          {landingPage.info2}
         </p>
 
         <div className="contact-btn-div">
           <a href="mailto:jordansutart08@gmail.com">
             <button className="letsTalkBtn">
-              <p className="letsTalkBtn-text">Let&apos;s Talk!</p>
+              <p className="letsTalkBtn-text">{landingPage.buttontalk}</p>
               <span className="letsTalkBtn-BG" />
             </button>
           </a>

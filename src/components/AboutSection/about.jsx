@@ -1,39 +1,43 @@
+import { getDatabase, ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
+
 const About = () => {
+  const [about, setAbout] = useState({});
+
+  useEffect(() => {
+    const db = getDatabase();
+    const AboutRef = ref(db, "AboutSection/");
+    onValue(AboutRef, (snapshot) => {
+      const data = snapshot.val();
+      setAbout(data);
+    });
+  }, []);
+
   return (
     <section className="about-section-container" id="about">
       <div className="about-section">
         <div className="section-heading">
           <h2 className="section-heading-article" aria-label="About me heading">
-            &lt;/AboutMe&gt;
+            &lt;{about.headingAbout}&gt;
           </h2>
           <p className="sectionHeadingP" />
         </div>
         <div className="info-dp-section">
           <div className="about-info">
-            <p>
-              Hi! My name is Jordan Sutarto. I&apos;m a second-year Informatics
-              student at Klabat University. I am interested in web design and
-              Programming. My interest in this field started in 2023 when I
-              tried to learn about web development.
-            </p>
+            <p>{about.personInfo1}</p>
             <br />
-            <p>
-              i started enjoying web development. Creating custom things for web
-              taught me a lot about design &amp; development!
-            </p>
+            <p>{about.personInfo2}</p>
             <br />
-            <p>
-              My main focus these days is on web design and learning more about
-              web development.
-            </p>
+            <p>{about.personInfo3}</p>
+
             {/* Resume button */}
             <button className="resume-btn" id="resume-btn">
               <div className="sign">
                 <svg viewBox="0 0 640 512">
-                  <path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
+                  <path d={about.resumeSVG} />
                 </svg>
               </div>
-              <div className="text">Resume</div>
+              <div className="text">{about.resume}</div>
             </button>
           </div>
           <div className="dp">
