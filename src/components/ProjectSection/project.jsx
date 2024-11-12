@@ -38,7 +38,7 @@ const ProjectSection = () => {
                 <p className="ProjectDescription">{project.project1desc}</p>
                 <div className="project-buttons">
                   <a
-                    href="./project1/index.html"
+                    href={project.linknetflix}
                     target="_blank"
                     className="cta"
                     aria-label="Visit Project 2"

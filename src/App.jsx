@@ -3,6 +3,7 @@ import LandingPage from "./components/LandingPage/landingPage";
 import About from "./components/AboutSection/about";
 import SkillSection from "./components/SkillSection/Skill";
 import ProjectSection from "./components/ProjectSection/project";
+import Footer from "./components/Footer/footer";
 
 const App = () => {
   return (
@@ -14,6 +15,8 @@ const App = () => {
         <SkillSection />
         <ProjectSection />
       </main>
+
+      <Footer />
     </>
   );
 };
