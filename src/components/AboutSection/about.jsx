@@ -41,7 +41,11 @@ const About = () => {
             </button>
           </div>
           <div className="dp">
-            <img src="#" alt="Jordan Sutarto" aria-label="jordanphoto" />
+            <img
+              src={about.personphoto}
+              alt="Jordan Sutarto"
+              aria-label="jordanphoto"
+            />
           </div>
         </div>
       </div>
