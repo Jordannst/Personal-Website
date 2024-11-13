@@ -4,6 +4,7 @@ import About from "./components/AboutSection/about";
 import SkillSection from "./components/SkillSection/Skill";
 import ProjectSection from "./components/ProjectSection/project";
 import Footer from "./components/Footer/footer";
+import "./assets/styles.css";
 
 const App = () => {
   return (

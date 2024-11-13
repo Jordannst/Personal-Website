@@ -34,7 +34,9 @@ const ProjectSection = () => {
                   alt="logo for Project"
                   className="iconforproject"
                 />
-                <article className="ProjectHeading">{project.heading1}</article>
+                <article className="ProjectHeading">
+                  {project.projectheading1}
+                </article>
                 <p className="ProjectDescription">{project.project1desc}</p>
                 <div className="project-buttons">
                   <a
