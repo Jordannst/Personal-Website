@@ -1,8 +1,11 @@
 import { getDatabase, ref, onValue } from "firebase/database";
 import { useEffect, useState } from "react";
+import useAOS from "../../hooks/useAOS";
 
 const ProjectSection = () => {
   const [project, setProject] = useState({});
+  const [loading, setLoading] = useState(true);
+  useAOS(loading, project);
 
   useEffect(() => {
     const db = getDatabase();
@@ -10,14 +13,19 @@ const ProjectSection = () => {
     onValue(ProjectRef, (snapshot) => {
       const data = snapshot.val();
       setProject(data);
+      setLoading(false);
     });
   }, []);
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <section className="projects-section-container" id="projects">
       <div className="projects-section-div">
-        <div className="section-heading">
+        <div className="section-heading" data-aos="fade-up">
           <h2
+            data-aos="fade-up"
             className="section-heading-article"
             aria-label="My projects starts from here"
           >
@@ -26,7 +34,7 @@ const ProjectSection = () => {
           <p className="sectionHeadingP" />
         </div>
         <div className="project-boxes-div">
-          <div className="project-box-wrapper">
+          <div className="project-box-wrapper" data-aos="fade-up">
             <div className="project-box project-box5" id="project-box5">
               <div className="info-div">
                 <img
@@ -60,7 +68,7 @@ const ProjectSection = () => {
                 />
               </div>
             </div>
-            <div className="project-box-wrapper">
+            <div className="project-box-wrapper" data-aos="fade-up">
               <div className="project-box project-box5" id="project-box5">
                 <div className="info-div">
                   <img

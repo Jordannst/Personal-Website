@@ -7,17 +7,27 @@ import ProjectSection from "./components/ProjectSection/project";
 import Footer from "./components/Footer/footer";
 import { InfinitySpin } from "react-loader-spinner";
 import "./assets/styles.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    AOS.init();
 
     setTimeout(() => {
+      // set loading 1 detik setelah halaman di load
       setLoading(false);
     }, 1000);
   }, []);
+
+  useEffect(() => {
+    // kembali ke header saat refresh halaman
+    if (!loading) {
+      window.scrollTo(0, 0);
+    }
+  }, [loading]);
 
   return (
     <>
@@ -40,6 +50,7 @@ const App = () => {
   );
 };
 
+// stlye loading
 const styles = {
   blurOverlay: {
     position: "fixed",
@@ -47,7 +58,7 @@ const styles = {
     left: 0,
     width: "100%",
     height: "100%",
-    backdropFilter: "blur(15px)",
+    backdropFilter: "blur(10px)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",

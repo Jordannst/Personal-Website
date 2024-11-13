@@ -78,6 +78,7 @@ html {
   --color-shadowDark: rgba(0, 0, 0, 0.137);
   --static-heading-gradient-blue: #b0f3f1;
   --color-blue: #2516cf;
+  --static-heading-gradient-pink: #ffcfdf;
   --tech-stack-box-first-color: #1a1a29;
   --tech-stack-box-second-color: rgba(27, 27, 40, 0);
   --tech-stack-box-border-color: #292929;
@@ -701,6 +702,7 @@ noscript {
   font-weight: 900;
   height: 100px;
   letter-spacing: 5px;
+  filter: drop-shadow(0 0 10px rgba(0, 100, 255, 0.2));
   background-image: -webkit-gradient(
     linear,
     left top,
