@@ -1261,10 +1261,6 @@ footer {
     font-size: 2.5rem;
   }
 
-  /* .hey {
-      left: 70px;
-    } */
-
   .logo:hover {
     transform: translateY(200px);
     transition-duration: 1s;
