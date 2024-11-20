@@ -72,8 +72,8 @@ const ProjectSection = () => {
               <div className="project-box project-box5" id="project-box5">
                 <div className="info-div">
                   <img
-                    src={project.project2view}
-                    alt="cat head"
+                    src={project.dashboardLogo}
+                    alt="Student Dashboard preview image"
                     className="iconforproject"
                   />
                   <article className="ProjectHeading">
@@ -82,7 +82,7 @@ const ProjectSection = () => {
                   <p className="ProjectDescription">{project.project2desc}</p>
                   <div className="project-buttons">
                     <a
-                      href={project.project2view}
+                      href={project.linkdashboard}
                       target="_blank"
                       className="cta"
                       aria-label="Visit"
