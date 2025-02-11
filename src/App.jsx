@@ -17,13 +17,11 @@ const App = () => {
     AOS.init();
 
     setTimeout(() => {
-      // set loading 1 detik setelah halaman di load
       setLoading(false);
     }, 1000);
   }, []);
 
   useEffect(() => {
-    // kembali ke header saat refresh halaman
     if (!loading) {
       window.scrollTo(0, 0);
     }
