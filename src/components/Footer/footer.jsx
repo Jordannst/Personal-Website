@@ -48,7 +48,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href={Footer.linkdinURL}
                 target="_blank"
                 aria-label="My LinkedIn"
                 data-aos="fade-right"
