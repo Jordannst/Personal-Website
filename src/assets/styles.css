@@ -1,9 +1,10 @@
 body {
   background-color: var(--color-dark-mode);
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
-.text-content .main,
-body {
+.text-content .main {
   overflow-x: hidden;
 }
 
@@ -50,6 +51,14 @@ footer {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Prevent horizontal scroll */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
 ::selection {
   background-color: transparent;
 }
@@ -63,6 +72,8 @@ html {
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 :root {
@@ -154,10 +165,12 @@ html {
 
 header {
   width: 100%;
+  max-width: 100%;
   height: 115px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .navbar,
@@ -188,11 +201,13 @@ noscript {
   backdrop-filter: blur(10px);
   height: 80px;
   width: 80%;
+  max-width: 100%;
   padding: 0 20px;
   justify-content: space-between;
   z-index: 999;
   border: 1px solid var(--color-navbarBorder-dark);
   border-radius: 50px;
+  box-sizing: border-box;
 }
 
 .navbar-tabs,
@@ -394,21 +409,25 @@ noscript {
 
 .main {
   width: 100%;
+  max-width: 100%;
   height: fit-content;
   position: relative;
+  overflow-x: hidden;
 }
 
 /* blob bagian cahaya background */
 .blob {
   position: absolute;
-  right: -15%;
+  right: -10%;
   top: 0;
   background-color: var(--color-blue);
   width: 600px;
+  max-width: 50vw;
   height: 100vh;
   filter: blur(300px);
   opacity: 0.3;
   animation: 1s linear infinite alternate-reverse breath;
+  overflow: hidden;
 }
 
 @keyframes breath {
@@ -423,11 +442,13 @@ noscript {
 
 .landing-page-container {
   width: 100%;
+  max-width: 100%;
   height: calc(100vh - 115px);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .text-content {
@@ -686,12 +707,14 @@ noscript {
 /* style section */
 .about-section-container {
   width: 100%;
+  max-width: 100%;
   height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding-top: 200px;
+  overflow-x: hidden;
 }
 
 .about-section,
@@ -797,9 +820,11 @@ noscript {
 .skills-section-container {
   padding-top: 150px;
   width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .language-speak,
@@ -934,10 +959,13 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .project-boxes-div {
   width: 100%;
+  max-width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -945,6 +973,7 @@ footer {
   align-items: center;
   gap: 50px;
   padding: 50px;
+  box-sizing: border-box;
 }
 
 /* hover view pada bagian project */
@@ -955,6 +984,7 @@ footer {
 
 .project-box {
   width: 100%;
+  max-width: 100%;
   height: 400px;
   display: flex;
   flex-direction: row;
@@ -964,6 +994,7 @@ footer {
   border: 1px solid var(--tech-stack-box-border-color);
   margin-bottom: 10%;
   filter: drop-shadow(0 0 10px rgba(0, 100, 255, 0.3));
+  box-sizing: border-box;
 }
 
 .info-div {
@@ -1081,8 +1112,10 @@ footer {
 
 footer {
   width: 100%;
+  max-width: 100%;
   height: fit-content;
   border-top: 1px solid var(--tech-stack-box-border-color);
+  overflow-x: hidden;
 }
 
 .footer-background {
