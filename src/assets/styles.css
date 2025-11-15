@@ -1,6 +1,7 @@
 body {
   background-color: var(--color-dark-mode);
   overflow-x: hidden;
+  overflow-y: auto;
   max-width: 100%;
 }
 
@@ -55,6 +56,7 @@ footer {
 html,
 body {
   overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
   max-width: 100vw;
 }
@@ -73,6 +75,7 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overflow-y: auto;
   max-width: 100%;
 }
 
@@ -405,6 +408,8 @@ noscript {
   height: 337px;
   z-index: -2;
   content: "";
+  position: absolute;
+  pointer-events: none;
 }
 
 .main {
@@ -413,6 +418,7 @@ noscript {
   height: fit-content;
   position: relative;
   overflow-x: hidden;
+  overflow-y: visible;
 }
 
 /* blob bagian cahaya background */
@@ -449,6 +455,7 @@ noscript {
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .text-content {
@@ -708,23 +715,30 @@ noscript {
 .about-section-container {
   width: 100%;
   max-width: 100%;
-  height: fit-content;
+  min-height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding-top: 200px;
+  padding-bottom: 100px;
   overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
 }
 
 .about-section,
 .projects-section-div,
 .skills-section {
   width: 60%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  overflow: visible;
+  position: relative;
 }
 
 .projects-heading,
@@ -780,6 +794,8 @@ noscript {
   width: 100%;
   display: flex;
   margin-top: 30px;
+  overflow: visible;
+  position: relative;
 }
 
 .about-info {
@@ -798,40 +814,57 @@ noscript {
   align-items: flex-start;
   justify-content: center;
   position: relative;
+  overflow: visible;
+  min-height: 337px;
 }
 
 .dp::before {
   box-shadow: 2px 2px 0 inset var(--color-blue), -2px -2px 0 inset transparent;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
 }
 
 .dp::after {
   box-shadow: 2px 2px 0 inset transparent, -2px -2px 0 inset var(--color-blue);
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
 }
 
 .dp:hover::after {
-  transform: translate(20px, 20px);
+  transform: translateX(calc(-50% + 20px)) translateY(20px);
 }
 
 .dp:hover::before {
-  transform: translate(-20px, -20px);
+  transform: translateX(calc(-50% - 20px)) translateY(-20px);
 }
 
 /* stlye section skill */
 .skills-section-container {
   padding-top: 150px;
+  padding-bottom: 100px;
   width: 100%;
   max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  box-sizing: border-box;
+  min-height: fit-content;
 }
 
 .language-speak,
 .tech-stack-wrapper {
   width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .language-speak {
@@ -846,7 +879,9 @@ noscript {
 
 .frontend-dev-section {
   width: 100%;
+  max-width: 100%;
   margin-top: 50px;
+  box-sizing: border-box;
 }
 
 .frontend-dev-heading {
@@ -897,6 +932,10 @@ noscript {
   flex-wrap: wrap;
   gap: 50px;
   margin-top: 50px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .tech-stack-box,
@@ -942,6 +981,9 @@ noscript {
   letter-spacing: 0.5px;
   font-size: 1.6rem;
   backdrop-filter: blur(5px);
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
   font-weight: 500;
 }
 
@@ -961,6 +1003,8 @@ footer {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-y: visible;
+  height: fit-content;
 }
 
 .project-boxes-div {
